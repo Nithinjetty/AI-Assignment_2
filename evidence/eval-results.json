@@ -1,0 +1,82 @@
+{
+    "score": 100.0,
+    "threshold": 80.0,
+    "verdict": "PASS",
+    "results": [
+        {
+            "id": "EV-001",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-002",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-003",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-004",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-005",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-006",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-007",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-008",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-009",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-010",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-011",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-012",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-013",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-014",
+            "status": "PASS",
+            "reason": ""
+        },
+        {
+            "id": "EV-015",
+            "status": "PASS",
+            "reason": ""
+        }
+    ]
+}

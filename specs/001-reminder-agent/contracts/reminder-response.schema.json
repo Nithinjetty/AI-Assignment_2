@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/reminder-response.schema.json",
+  "title": "Reminder Agent Response",
+  "description": "The only JSON object emitted for a processed reminder prompt.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task",
+    "datetime",
+    "intent",
+    "message"
+  ],
+  "properties": {
+    "task": {
+      "type": "string",
+      "description": "Identified reminder task; empty only if it cannot be determined."
+    },
+    "datetime": {
+      "description": "ISO 8601 date-time with an explicit timezone offset, or an empty string when unresolved.",
+      "anyOf": [
+        {
+          "const": ""
+        },
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    },
+    "intent": {
+      "type": "string",
+      "enum": [
+        "CREATE",
+        "RESCHEDULE",
+        "SNOOZE",
+        "CLARIFY"
+      ]
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Concise action confirmation or focused clarification question."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "enum": [
+              "CREATE",
+              "RESCHEDULE",
+              "SNOOZE"
+            ]
+          }
+        },
+        "required": [
+          "intent"
+        ]
+      },
+      "then": {
+        "properties": {
+          "task": {
+            "minLength": 1
+          },
+          "datetime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  ]
+}
